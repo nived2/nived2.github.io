@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nived - DevOps Engineer Portfolio">
-    <title>Nived - DevOps Engineer</title>
+    <meta name="description" content="Nived - Docker & DevOps Engineer | Expert in containerization, orchestration, and automated deployments">
+    <title>Nived - Docker & DevOps Engineer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -26,14 +49,14 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm Nived</h1>
-            <h2>DevOps Engineer</h2>
-            <p>Automating infrastructure, optimizing deployments, and ensuring reliability</p>
+            <h2>Docker & DevOps Engineer</h2>
+            <p>Crafting efficient container solutions and streamlining deployment workflows</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary">View Projects</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
-                <a href="assets/pdf/nived.pdf" class="btn primary" download>
-                    <i class="fas fa-download"></i> Resume
+                <a href="nived.pdf" class="btn primary" download>
+                    <i class="fas fa-download"></i> Download Resume
                 </a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
             </div>
         </div>
     </section>
@@ -41,42 +64,42 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills</h2>
+            <h2>Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+                    <h3><i class="fab fa-docker"></i> Docker & Containers</h3>
                     <ul>
-                        <li>AWS Services</li>
-                        <li>Terraform</li>
-                        <li>Infrastructure as Code</li>
-                        <li>Cloud Architecture</li>
+                        <li>Docker Engine & Compose</li>
+                        <li>Container Security</li>
+                        <li>Image Optimization</li>
+                        <li>Multi-stage Builds</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-box"></i> Containerization</h3>
+                    <h3><i class="fas fa-box"></i> Orchestration</h3>
                     <ul>
-                        <li>Docker</li>
                         <li>Kubernetes</li>
-                        <li>Container Orchestration</li>
-                        <li>Microservices</li>
+                        <li>Docker Swarm</li>
+                        <li>Service Mesh</li>
+                        <li>Load Balancing</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-sync"></i> CI/CD</h3>
                     <ul>
-                        <li>Jenkins</li>
-                        <li>GitLab CI</li>
+                        <li>Jenkins Pipelines</li>
+                        <li>GitLab CI/CD</li>
                         <li>GitHub Actions</li>
-                        <li>Automation</li>
+                        <li>Automated Testing</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Monitoring</h3>
+                    <h3><i class="fas fa-shield-alt"></i> DevOps Practices</h3>
                     <ul>
-                        <li>Prometheus</li>
-                        <li>Grafana</li>
-                        <li>ELK Stack</li>
-                        <li>Alerting</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Monitoring & Logging</li>
+                        <li>Security Best Practices</li>
+                        <li>Performance Optimization</li>
                     </ul>
                 </div>
             </div>
@@ -86,39 +109,42 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>AWS Infrastructure</h3>
-                    <p>Automated cloud infrastructure deployment using Terraform and AWS services.</p>
+                    <h3>Container Platform</h3>
+                    <p>Designed and implemented a scalable container platform using Docker and Kubernetes, supporting multiple microservices with automated deployment.</p>
                     <div class="tech-stack">
-                        <span>AWS</span>
-                        <span>Terraform</span>
-                        <span>CloudWatch</span>
-                    </div>
-                    <a href="https://github.com/nived2/aws-infrastructure" class="btn">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Kubernetes Cluster</h3>
-                    <p>Container orchestration with Kubernetes, including automated scaling and monitoring.</p>
-                    <div class="tech-stack">
-                        <span>Kubernetes</span>
                         <span>Docker</span>
+                        <span>Kubernetes</span>
                         <span>Helm</span>
+                        <span>Prometheus</span>
                     </div>
-                    <a href="https://github.com/nived2/k8s-deployment" class="btn">View Project</a>
+                    <a href="https://github.com/nived2/container-platform" class="btn primary">View Project</a>
                 </div>
 
                 <div class="project-card">
                     <h3>CI/CD Pipeline</h3>
-                    <p>Automated deployment pipeline using Jenkins and GitLab CI.</p>
+                    <p>Built an end-to-end CI/CD pipeline with automated testing, security scanning, and deployment to multiple environments using Docker containers.</p>
                     <div class="tech-stack">
                         <span>Jenkins</span>
-                        <span>GitLab</span>
                         <span>Docker</span>
+                        <span>GitLab</span>
+                        <span>SonarQube</span>
                     </div>
-                    <a href="https://github.com/nived2/jenkins-pipeline" class="btn">View Project</a>
+                    <a href="https://github.com/nived2/docker-cicd" class="btn primary">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Microservices Architecture</h3>
+                    <p>Developed a microservices-based application with Docker Compose, implementing service discovery and load balancing.</p>
+                    <div class="tech-stack">
+                        <span>Docker Compose</span>
+                        <span>Nginx</span>
+                        <span>Redis</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="https://github.com/nived2/microservices" class="btn primary">View Project</a>
                 </div>
             </div>
         </div>
@@ -127,7 +153,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact</h2>
+            <h2>Let's Connect</h2>
             <div class="contact-info">
                 <a href="mailto:nivedmahendran547@gmail.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -135,18 +161,18 @@
                 </a>
                 <a href="https://linkedin.com/in/nived-mahendran-a026941b2" class="contact-item" target="_blank">
                     <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
+                    <span>LinkedIn Profile</span>
                 </a>
                 <a href="https://github.com/nived2" class="contact-item" target="_blank">
                     <i class="fab fa-github"></i>
-                    <span>GitHub</span>
+                    <span>GitHub Projects</span>
                 </a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Nived. All rights reserved.</p>
+        <p>&copy; 2024 Nived | Docker & DevOps Engineer</p>
     </footer>
 </body>
 </html>
