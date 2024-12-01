@@ -32,22 +32,28 @@ window.addEventListener('scroll', () => {
 // Sample projects data - Replace with your actual projects
 const projects = [
     {
-        title: "CI/CD Pipeline Automation",
-        description: "Implemented automated deployment pipeline using Jenkins, Docker, and AWS",
-        technologies: ["Jenkins", "Docker", "AWS", "Git"],
-        link: "#"
+        title: "AWS Infrastructure Automation",
+        description: "Developed comprehensive IaC solutions using Terraform to manage AWS infrastructure, including VPC, EC2, RDS, and EKS clusters. Implemented auto-scaling and high availability patterns.",
+        technologies: ["Terraform", "AWS", "Python", "CloudWatch"],
+        link: "https://github.com/nived2/aws-infrastructure"
     },
     {
-        title: "Infrastructure as Code",
-        description: "Developed Terraform scripts for managing cloud infrastructure",
-        technologies: ["Terraform", "AWS", "Python"],
-        link: "#"
+        title: "CI/CD Pipeline Optimization",
+        description: "Designed and implemented efficient CI/CD pipelines using Jenkins and GitHub Actions. Reduced deployment time by 60% and implemented automated testing and security scanning.",
+        technologies: ["Jenkins", "GitHub Actions", "Docker", "SonarQube"],
+        link: "https://github.com/nived2/cicd-pipeline"
     },
     {
         title: "Kubernetes Cluster Management",
-        description: "Set up and managed Kubernetes clusters for microservices architecture",
-        technologies: ["Kubernetes", "Docker", "Helm"],
-        link: "#"
+        description: "Set up and managed production-grade Kubernetes clusters, implemented microservices architecture, and established monitoring using Prometheus and Grafana.",
+        technologies: ["Kubernetes", "Docker", "Helm", "Prometheus"],
+        link: "https://github.com/nived2/k8s-cluster"
+    },
+    {
+        title: "Log Analytics Platform",
+        description: "Built a centralized logging solution using ELK Stack, enabling real-time monitoring and alerting for distributed systems.",
+        technologies: ["Elasticsearch", "Logstash", "Kibana", "Beats"],
+        link: "https://github.com/nived2/log-analytics"
     }
 ];
 
