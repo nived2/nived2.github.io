@@ -1,0 +1,15 @@
+{
+  "name": "cursor",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website showcasing DevOps skills, projects, and professional experience.",
+  "main": "encrypt-resume.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}

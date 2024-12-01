@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nived - DevOps Engineer Portfolio</title>
+    <title>Nived - DevOps Engineer</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -18,7 +19,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -30,9 +30,12 @@
             <h1>Hi, I'm Nived</h1>
             <h2>DevOps Engineer</h2>
             <p>Passionate about automation, cloud infrastructure, and continuous integration</p>
-            <div class="cta-buttons">
+            <div class="hero-buttons">
                 <a href="#projects" class="btn primary">View Projects</a>
                 <a href="#contact" class="btn secondary">Contact Me</a>
+                <button onclick="downloadResume()" class="btn primary">
+                    <i class="fas fa-download"></i> Download Resume
+                </button>
             </div>
         </div>
     </section>
@@ -95,21 +98,53 @@
     <section id="projects" class="projects">
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
-            <!-- Project cards will be added here -->
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-        <h2 class="section-title">Resume</h2>
-        <div class="resume-content">
-            <div class="resume-summary">
-                <p>Download my detailed resume to learn more about my professional experience and qualifications in DevOps, containerization, and 3-tier application development.</p>
+            <div class="project-card">
+                <h3>3-Tier Web Application Architecture</h3>
+                <p>Designed and implemented a scalable 3-tier web application using React frontend, Node.js backend, and PostgreSQL database. Containerized each tier with Docker and orchestrated using Docker Compose. Implemented Redis for session management and caching.</p>
+                <div class="tech-stack">
+                    <span>Docker</span>
+                    <span>Node.js</span>
+                    <span>React</span>
+                    <span>PostgreSQL</span>
+                    <span>Redis</span>
+                </div>
+                <a href="projects/3-tier-app" class="btn primary">View Project</a>
             </div>
-            <div class="resume-buttons">
-                <a href="assets/pdf/nived.pdf" class="btn primary" download>
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+
+            <div class="project-card">
+                <h3>CI/CD Pipeline for 3-Tier App</h3>
+                <p>Set up automated CI/CD pipeline using Jenkins and GitLab for the 3-tier application. Implemented automated testing, containerized builds, and staged deployments with proper environment segregation.</p>
+                <div class="tech-stack">
+                    <span>Jenkins</span>
+                    <span>GitLab CI</span>
+                    <span>Docker</span>
+                    <span>Shell Script</span>
+                </div>
+                <a href="projects/cicd-pipeline" class="btn primary">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Infrastructure Automation</h3>
+                <p>Developed infrastructure as code using Terraform to provision and manage the complete infrastructure for the 3-tier application. Includes network configuration, security groups, and automated scaling policies.</p>
+                <div class="tech-stack">
+                    <span>Terraform</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>GitLab</span>
+                </div>
+                <a href="projects/infra-automation" class="btn primary">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Application Monitoring Stack</h3>
+                <p>Implemented comprehensive monitoring for the 3-tier application using Prometheus and Grafana. Set up Redis monitoring, database performance tracking, and application metrics collection with custom dashboards.</p>
+                <div class="tech-stack">
+                    <span>Prometheus</span>
+                    <span>Grafana</span>
+                    <span>Redis</span>
+                    <span>Docker</span>
+                </div>
+                <a href="projects/monitoring-stack" class="btn primary">View Project</a>
             </div>
         </div>
     </section>
@@ -118,19 +153,16 @@
     <section id="contact" class="contact">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
+            <p>Feel free to reach out to me for any opportunities or collaborations.</p>
+            <div class="contact-links">
+                <a href="mailto:nivedmahendran547@gmail.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:nived.dev2@gmail.com">nived.dev2@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/nived2" target="_blank">github.com/nived2</a>
-                </div>
-                <div class="contact-item">
+                    <span>nivedmahendran547@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/nived-mahendran-a026941b2" class="contact-item" target="_blank">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/nived-n" target="_blank">linkedin.com/in/nived-n</a>
-                </div>
+                    <span>LinkedIn Profile</span>
+                </a>
             </div>
         </div>
     </section>
@@ -141,5 +173,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/encryption.js"></script>
 </body>
 </html>
