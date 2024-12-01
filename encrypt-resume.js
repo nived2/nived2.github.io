@@ -1,49 +1,36 @@
 const fs = require('fs');
 const CryptoJS = require('crypto-js');
 
-// Read the PDF file
-const pdfPath = 'assets/pdf/nived.pdf';
-const encryptedPath = 'assets/pdf/nived.pdf.enc';
+// Configuration
+const ENCRYPTION_KEY = 'your-secure-password'; // Use the same password as in encryption.js
+const INPUT_FILE = 'assets/pdf/nived.pdf';
+const OUTPUT_FILE = 'assets/pdf/nived.pdf.enc';
 
-// Read the PDF file
-fs.readFile(pdfPath, (err, pdfData) => {
+// Read and encrypt the PDF file
+fs.readFile(INPUT_FILE, (err, pdfData) => {
     if (err) {
         console.error('Error reading PDF:', err);
         return;
     }
 
-    // Convert PDF data to WordArray
-    const wordArray = CryptoJS.lib.WordArray.create(pdfData);
-    const password = "your-secure-password"; // Change this to your secure password
-    
-    // Generate a random salt
-    const salt = CryptoJS.lib.WordArray.random(128/8);
-    
-    // Generate key
-    const key = CryptoJS.PBKDF2(password, salt, {
-        keySize: 256/32,
-        iterations: 1000
-    });
-    
-    // Generate random IV
-    const iv = CryptoJS.lib.WordArray.random(128/8);
-    
-    // Encrypt
-    const encrypted = CryptoJS.AES.encrypt(wordArray, key, { 
-        iv: iv,
-        padding: CryptoJS.pad.Pkcs7,
-        mode: CryptoJS.mode.CBC
-    });
-    
-    // Combine salt + iv + encrypted data
-    const encryptedFile = salt.toString() + iv.toString() + encrypted.toString();
-    
-    // Write the encrypted file
-    fs.writeFile(encryptedPath, encryptedFile, (err) => {
-        if (err) {
-            console.error('Error writing encrypted file:', err);
-            return;
-        }
-        console.log('Resume encrypted successfully!');
-    });
+    try {
+        // Convert PDF data to string
+        const text = Array.from(new Uint8Array(pdfData))
+            .map(byte => String.fromCharCode(byte))
+            .join('');
+        
+        // Encrypt the content
+        const encrypted = CryptoJS.AES.encrypt(text, ENCRYPTION_KEY).toString();
+        
+        // Write the encrypted content
+        fs.writeFile(OUTPUT_FILE, encrypted, (err) => {
+            if (err) {
+                console.error('Error writing encrypted file:', err);
+                return;
+            }
+            console.log('Resume encrypted successfully!');
+        });
+    } catch (error) {
+        console.error('Error encrypting file:', error);
+    }
 });

@@ -33,7 +33,7 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary">View Projects</a>
                 <a href="#contact" class="btn secondary">Contact Me</a>
-                <button onclick="downloadResume()" class="btn primary">
+                <button onclick="downloadResume()" class="btn primary download-resume-btn">
                     <i class="fas fa-download"></i> Download Resume
                 </button>
             </div>
@@ -53,98 +53,92 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend Development</h3>
-                <ul>
-                    <li><i class="fab fa-react"></i> React</li>
-                    <li><i class="fab fa-js"></i> JavaScript</li>
-                    <li><i class="fab fa-html5"></i> HTML/CSS</li>
-                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Backend & Database</h3>
-                <ul>
-                    <li><i class="fab fa-node-js"></i> Node.js</li>
-                    <li><i class="fas fa-database"></i> PostgreSQL</li>
-                    <li><i class="fas fa-memory"></i> Redis</li>
-                    <li><i class="fas fa-server"></i> RESTful APIs</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>DevOps & Containers</h3>
-                <ul>
-                    <li><i class="fab fa-docker"></i> Docker</li>
-                    <li><i class="fab fa-jenkins"></i> Jenkins</li>
-                    <li><i class="fab fa-gitlab"></i> GitLab CI/CD</li>
-                    <li><i class="fas fa-code-branch"></i> Terraform</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Monitoring</h3>
-                <ul>
-                    <li><i class="fab fa-git-alt"></i> Git</li>
-                    <li><i class="fas fa-chart-line"></i> Prometheus</li>
-                    <li><i class="fas fa-chart-bar"></i> Grafana</li>
-                    <li><i class="fab fa-linux"></i> Linux</li>
-                </ul>
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Infrastructure & Cloud</h3>
+                    <ul>
+                        <li>AWS Cloud Services</li>
+                        <li>Terraform</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Cloud Architecture</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Containerization</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Container Orchestration</li>
+                        <li>Microservices</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>CI/CD & Automation</h3>
+                    <ul>
+                        <li>Jenkins</li>
+                        <li>GitLab CI</li>
+                        <li>GitHub Actions</li>
+                        <li>Automation Scripts</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Monitoring & Security</h3>
+                    <ul>
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+                        <li>ELK Stack</li>
+                        <li>Security Best Practices</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>3-Tier Web Application Architecture</h3>
-                <p>Designed and implemented a scalable 3-tier web application using React frontend, Node.js backend, and PostgreSQL database. Containerized each tier with Docker and orchestrated using Docker Compose. Implemented Redis for session management and caching.</p>
-                <div class="tech-stack">
-                    <span>Docker</span>
-                    <span>Node.js</span>
-                    <span>React</span>
-                    <span>PostgreSQL</span>
-                    <span>Redis</span>
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>AWS Cloud Infrastructure</h3>
+                    <p>Designed and implemented scalable AWS infrastructure using Terraform, including VPC setup, auto-scaling groups, and high availability configurations.</p>
+                    <div class="tech-stack">
+                        <span>AWS</span>
+                        <span>Terraform</span>
+                        <span>CloudWatch</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/nived2/aws-infrastructure" class="btn">View Project</a>
+                    </div>
                 </div>
-                <a href="projects/3-tier-app" class="btn primary">View Project</a>
-            </div>
 
-            <div class="project-card">
-                <h3>CI/CD Pipeline for 3-Tier App</h3>
-                <p>Set up automated CI/CD pipeline using Jenkins and GitLab for the 3-tier application. Implemented automated testing, containerized builds, and staged deployments with proper environment segregation.</p>
-                <div class="tech-stack">
-                    <span>Jenkins</span>
-                    <span>GitLab CI</span>
-                    <span>Docker</span>
-                    <span>Shell Script</span>
+                <div class="project-card">
+                    <h3>Kubernetes Deployment</h3>
+                    <p>Implemented container orchestration using Kubernetes, including deployment strategies, service mesh, and automated scaling policies.</p>
+                    <div class="tech-stack">
+                        <span>Kubernetes</span>
+                        <span>Docker</span>
+                        <span>Helm</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/nived2/k8s-deployment" class="btn">View Project</a>
+                    </div>
                 </div>
-                <a href="projects/cicd-pipeline" class="btn primary">View Project</a>
-            </div>
 
-            <div class="project-card">
-                <h3>Infrastructure Automation</h3>
-                <p>Developed infrastructure as code using Terraform to provision and manage the complete infrastructure for the 3-tier application. Includes network configuration, security groups, and automated scaling policies.</p>
-                <div class="tech-stack">
-                    <span>Terraform</span>
-                    <span>Docker</span>
-                    <span>AWS</span>
-                    <span>GitLab</span>
+                <div class="project-card">
+                    <h3>Jenkins CI/CD Pipeline</h3>
+                    <p>Created automated CI/CD pipelines using Jenkins, implementing infrastructure as code, automated testing, and deployment strategies.</p>
+                    <div class="tech-stack">
+                        <span>Jenkins</span>
+                        <span>GitLab</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/nived2/jenkins-pipeline" class="btn">View Project</a>
+                    </div>
                 </div>
-                <a href="projects/infra-automation" class="btn primary">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Application Monitoring Stack</h3>
-                <p>Implemented comprehensive monitoring for the 3-tier application using Prometheus and Grafana. Set up Redis monitoring, database performance tracking, and application metrics collection with custom dashboards.</p>
-                <div class="tech-stack">
-                    <span>Prometheus</span>
-                    <span>Grafana</span>
-                    <span>Redis</span>
-                    <span>Docker</span>
-                </div>
-                <a href="projects/monitoring-stack" class="btn primary">View Project</a>
             </div>
         </div>
     </section>
