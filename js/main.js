@@ -29,31 +29,31 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Sample projects data - Replace with your actual projects
+// Projects data
 const projects = [
     {
-        title: "AWS Infrastructure Automation",
-        description: "Developed comprehensive IaC solutions using Terraform to manage AWS infrastructure, including VPC, EC2, RDS, and EKS clusters. Implemented auto-scaling and high availability patterns.",
-        technologies: ["Terraform", "AWS", "Python", "CloudWatch"],
-        link: "https://github.com/nived2/aws-infrastructure"
+        title: "3-Tier Web Application Architecture",
+        description: "Designed and implemented a scalable 3-tier web application using React frontend, Node.js backend, and PostgreSQL database. Containerized each tier with Docker and orchestrated using Docker Compose. Implemented Redis for session management and caching.",
+        technologies: ["Docker", "Node.js", "React", "PostgreSQL", "Redis"],
+        link: "https://github.com/nived2/3tier-webapp"
     },
     {
-        title: "CI/CD Pipeline Optimization",
-        description: "Designed and implemented efficient CI/CD pipelines using Jenkins and GitHub Actions. Reduced deployment time by 60% and implemented automated testing and security scanning.",
-        technologies: ["Jenkins", "GitHub Actions", "Docker", "SonarQube"],
-        link: "https://github.com/nived2/cicd-pipeline"
+        title: "CI/CD Pipeline for 3-Tier App",
+        description: "Set up automated CI/CD pipeline using Jenkins and GitLab for the 3-tier application. Implemented automated testing, containerized builds, and staged deployments with proper environment segregation.",
+        technologies: ["Jenkins", "GitLab CI", "Docker", "Shell Script"],
+        link: "https://github.com/nived2/3tier-cicd"
     },
     {
-        title: "Kubernetes Cluster Management",
-        description: "Set up and managed production-grade Kubernetes clusters, implemented microservices architecture, and established monitoring using Prometheus and Grafana.",
-        technologies: ["Kubernetes", "Docker", "Helm", "Prometheus"],
-        link: "https://github.com/nived2/k8s-cluster"
+        title: "Infrastructure Automation",
+        description: "Developed infrastructure as code using Terraform to provision and manage the complete infrastructure for the 3-tier application. Includes network configuration, security groups, and automated scaling policies.",
+        technologies: ["Terraform", "Docker", "AWS", "GitLab"],
+        link: "https://github.com/nived2/3tier-infrastructure"
     },
     {
-        title: "Log Analytics Platform",
-        description: "Built a centralized logging solution using ELK Stack, enabling real-time monitoring and alerting for distributed systems.",
-        technologies: ["Elasticsearch", "Logstash", "Kibana", "Beats"],
-        link: "https://github.com/nived2/log-analytics"
+        title: "Application Monitoring Stack",
+        description: "Implemented comprehensive monitoring for the 3-tier application using Prometheus and Grafana. Set up Redis monitoring, database performance tracking, and application metrics collection with custom dashboards.",
+        technologies: ["Prometheus", "Grafana", "Redis", "Docker"],
+        link: "https://github.com/nived2/3tier-monitoring"
     }
 ];
 
