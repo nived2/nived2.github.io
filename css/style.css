@@ -239,10 +239,10 @@ section {
 .resume-content {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .resume-summary {
-    text-align: center;
     max-width: 800px;
     margin: 0 auto 3rem;
 }
@@ -253,126 +253,9 @@ section {
     line-height: 1.8;
 }
 
-.resume-preview {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 3rem;
-}
-
-.resume-section {
-    margin-bottom: 2.5rem;
-}
-
-.resume-section:last-child {
-    margin-bottom: 0;
-}
-
-.resume-section h3 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 2rem;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-item:before {
-    content: '';
-    position: absolute;
-    left: -2rem;
-    top: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-}
-
-.timeline-item:after {
-    content: '';
-    position: absolute;
-    left: -1.6rem;
-    top: 1.5rem;
-    width: 2px;
-    height: calc(100% - 1rem);
-    background-color: var(--light-bg);
-}
-
-.timeline-item:last-child:after {
-    display: none;
-}
-
-.timeline-item h4 {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-period {
-    color: var(--primary-color);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.timeline-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.timeline-item ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-.timeline-item ul li:before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-}
-
-.certification-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.certification-item {
-    background-color: var(--light-bg);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.certification-item i {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
-
 .resume-buttons {
     display: flex;
-    gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .resume-buttons .btn {
@@ -385,6 +268,16 @@ section {
 
 .resume-buttons i {
     font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .resume {
+        padding: 3rem 1rem;
+    }
+    
+    .resume-summary p {
+        font-size: 1.1rem;
+    }
 }
 
 /* Contact Section */
