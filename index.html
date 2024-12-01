@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nived - DevOps Engineer Portfolio">
     <title>Nived - DevOps Engineer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">Nived</div>
-            <ul class="nav-links">
+    <header>
+        <nav>
+            <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -29,24 +27,13 @@
         <div class="hero-content">
             <h1>Hi, I'm Nived</h1>
             <h2>DevOps Engineer</h2>
-            <p>Passionate about automation, cloud infrastructure, and continuous integration</p>
+            <p>Automating infrastructure, optimizing deployments, and ensuring reliability</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary">View Projects</a>
                 <a href="#contact" class="btn secondary">Contact Me</a>
-                <button onclick="downloadResume()" class="btn primary download-resume-btn">
-                    <i class="fas fa-download"></i> Download Resume
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I am a Full Stack DevOps Engineer with extensive experience in designing and implementing 3-tier applications. My expertise includes containerization with Docker, CI/CD implementation using Jenkins and GitLab, and infrastructure automation with Terraform. I specialize in building and deploying scalable web applications with modern technology stacks.</p>
-                <p>With hands-on experience in both development and operations, I excel at bridging the gap between frontend, backend, and database layers while ensuring robust deployment pipelines and monitoring solutions.</p>
+                <a href="assets/pdf/nived.pdf" class="btn primary" download>
+                    <i class="fas fa-download"></i> Resume
+                </a>
             </div>
         </div>
     </section>
@@ -57,16 +44,16 @@
             <h2>Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Infrastructure & Cloud</h3>
+                    <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
                     <ul>
-                        <li>AWS Cloud Services</li>
+                        <li>AWS Services</li>
                         <li>Terraform</li>
                         <li>Infrastructure as Code</li>
                         <li>Cloud Architecture</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Containerization</h3>
+                    <h3><i class="fas fa-box"></i> Containerization</h3>
                     <ul>
                         <li>Docker</li>
                         <li>Kubernetes</li>
@@ -75,21 +62,21 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>CI/CD & Automation</h3>
+                    <h3><i class="fas fa-sync"></i> CI/CD</h3>
                     <ul>
                         <li>Jenkins</li>
                         <li>GitLab CI</li>
                         <li>GitHub Actions</li>
-                        <li>Automation Scripts</li>
+                        <li>Automation</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Monitoring & Security</h3>
+                    <h3><i class="fas fa-chart-line"></i> Monitoring</h3>
                     <ul>
                         <li>Prometheus</li>
                         <li>Grafana</li>
                         <li>ELK Stack</li>
-                        <li>Security Best Practices</li>
+                        <li>Alerting</li>
                     </ul>
                 </div>
             </div>
@@ -102,42 +89,36 @@
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>AWS Cloud Infrastructure</h3>
-                    <p>Designed and implemented scalable AWS infrastructure using Terraform, including VPC setup, auto-scaling groups, and high availability configurations.</p>
+                    <h3>AWS Infrastructure</h3>
+                    <p>Automated cloud infrastructure deployment using Terraform and AWS services.</p>
                     <div class="tech-stack">
                         <span>AWS</span>
                         <span>Terraform</span>
                         <span>CloudWatch</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/nived2/aws-infrastructure" class="btn">View Project</a>
-                    </div>
+                    <a href="https://github.com/nived2/aws-infrastructure" class="btn">View Project</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Kubernetes Deployment</h3>
-                    <p>Implemented container orchestration using Kubernetes, including deployment strategies, service mesh, and automated scaling policies.</p>
+                    <h3>Kubernetes Cluster</h3>
+                    <p>Container orchestration with Kubernetes, including automated scaling and monitoring.</p>
                     <div class="tech-stack">
                         <span>Kubernetes</span>
                         <span>Docker</span>
                         <span>Helm</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/nived2/k8s-deployment" class="btn">View Project</a>
-                    </div>
+                    <a href="https://github.com/nived2/k8s-deployment" class="btn">View Project</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Jenkins CI/CD Pipeline</h3>
-                    <p>Created automated CI/CD pipelines using Jenkins, implementing infrastructure as code, automated testing, and deployment strategies.</p>
+                    <h3>CI/CD Pipeline</h3>
+                    <p>Automated deployment pipeline using Jenkins and GitLab CI.</p>
                     <div class="tech-stack">
                         <span>Jenkins</span>
                         <span>GitLab</span>
                         <span>Docker</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/nived2/jenkins-pipeline" class="btn">View Project</a>
-                    </div>
+                    <a href="https://github.com/nived2/jenkins-pipeline" class="btn">View Project</a>
                 </div>
             </div>
         </div>
@@ -145,28 +126,27 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="contact-content">
-            <p>Feel free to reach out to me for any opportunities or collaborations.</p>
-            <div class="contact-links">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
                 <a href="mailto:nivedmahendran547@gmail.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <span>nivedmahendran547@gmail.com</span>
                 </a>
                 <a href="https://linkedin.com/in/nived-mahendran-a026941b2" class="contact-item" target="_blank">
                     <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn Profile</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/nived2" class="contact-item" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p>&copy; 2024 Nived. All rights reserved.</p>
     </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/encryption.js"></script>
 </body>
 </html>
